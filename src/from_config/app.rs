@@ -1,8 +1,9 @@
 use std::fs;
 
 use super::service_conf::ServiceConfig;
-use toml_spanner::{ Arena, Context, FromToml, Failed, Item };
-#[derive(Debug)]
+use toml_spanner::{ Arena, Context, Failed, FromToml, Item, Toml };
+#[derive(Debug, Toml)]
+#[toml(ToToml)]
 pub struct Config {
     pub service: ServiceConfig,
 }

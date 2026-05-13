@@ -1,5 +1,6 @@
-use toml_spanner::{ Context, FromToml, Failed, Item };
-#[derive(Debug)]
+use toml_spanner::{ Context, Failed, FromToml, Item, Toml };
+#[derive(Debug, Toml)]
+#[toml(ToToml)]
 pub struct ServiceConfig {
     pub host: Option<String>,
     pub port: Option<u32>,
